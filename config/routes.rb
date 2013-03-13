@@ -1,5 +1,11 @@
 Omrails::Application.routes.draw do
 
+
+  devise_for :users
+
+  # Devise commented out because of installation error.
+  # devise_for :installs
+
 get 'about' => 'pages#about'
 
   root :to => 'pages#home'

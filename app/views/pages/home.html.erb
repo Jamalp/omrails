@@ -1,12 +1,17 @@
-<div class="hero-unit">
-<h1>Testing Testing...
-	Welcome to my work in progress.
-</h1>
-<p>
-	This is the home page for my one month rails course
-	<%= link_to "One Month rails", "http://onemonthrails.com" %>
-</p>
-<p>
-	<%= link_to "Sign Up Now!", "#", class: "btn btn-primary btn-large" %>
-</p>
-</div>
+<% if user_signed_in? %>
+	<div class="hero-unit">
+		<h1> You're in! Pat yourself on the back :D </h1>
+<% else %>
+	<div class="hero-unit">
+		<h1>Testing Testing...
+			Welcome to my work in progress.
+		</h1>
+		<p>
+			This is the home page for my one month rails course
+			<%= link_to "One Month rails", "http://onemonthrails.com" %>
+		</p>
+		<p>
+			<%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
+		</p>
+	</div>
+<% end %>
