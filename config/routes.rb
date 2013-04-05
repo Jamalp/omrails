@@ -1,15 +1,18 @@
 Omrails::Application.routes.draw do
 
 
+  get "users/show"
+
   resources :pins
 
 
   devise_for :users
+  match 'users/:id' => 'users#show', as: :user
 
   # Devise commented out because of installation error.
   # devise_for :installs
 
-get 'about' => 'pages#about'
+  get 'about' => 'pages#about'
 
   root :to => 'pins#index'
 
