@@ -1,15 +1,13 @@
 <% if user_signed_in? %>
 		<div class="hero-unit">
-		<h1> You're in! Post Some Pictures! </h1>
+		<h1> You're in! What do you want to do? </h1>
 	</div>
 <% else %>
 	<div class="hero-unit">
-		<h1>Testing Testing...
-			Welcome to my work in progress.
+		<h1>Scheme It!
 		</h1>
 		<p>
-			This is the home page for my one month rails course
-			<%= link_to "One Month rails", "http://onemonthrails.com" %>
+			Connect. Scheme. Play!
 		</p>
 		<p>
 			<%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
